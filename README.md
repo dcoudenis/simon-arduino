@@ -1,15 +1,19 @@
 # simon-arduino
 Simon game with some electronics components and Arduino
 
-This is a simple project implementing [Simon game](https://en.wikipedia.org/wiki/Simon_(game)) on Arduino with a human interface based on prototyping printed circuit board.
+This is a simple project implementing [Simon game](https://en.wikipedia.org/wiki/Simon_(game)) on Arduino with a user interface based on a prototyping printed circuit board (PCB).
 
-Wiring diagram :
+# User interface
+
+## Wiring
 
 ![PCB board](pcb.jpg)
 
-We will use 5 LEDs/buttons for user's inputs. White LED/button is used to start/stop the game. The other LEDs show the sequence to the user and are lighted when user press the corresponding button. The LED state changes is done with an Arduino ouput and the button state is read with a digital input. So understand that the buttons controls the LED through the program. An analog output send a PWM signal to the passive buzzer. A note is associated with each LED color.
+We use 5 LEDs/buttons for user's inputs. White LED/button is used to start/stop the game. The other LEDs show the sequence to the user and are lighted when user press the corresponding button. The LEDs states changes are done with Arduino ouputs and the buttons states is read through digitals inputs. So understand that the buttons controls the LEDs through the program. An analog output send a PWM signal to the passive buzzer. A note is associated with each LED color.
 
-Pictures of physical board :
+Digitals inputs are wired with a 10kΩ pull-down resistor.
+
+## PCB
 
 Top :
 
@@ -22,4 +26,8 @@ Bottom :
 and Arduino/PCB wiring :
 
 ![Arduino wiring](arduino_wiring.jpg)
+
+# Program
+
+
 
