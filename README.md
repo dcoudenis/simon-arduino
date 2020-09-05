@@ -7,9 +7,13 @@ This is a simple project implementing [Simon game](https://en.wikipedia.org/wiki
 
 # User interface
 
-## Wiring
+## Wiring diagram
 
 ![PCB board](pcb.jpg)
+
+Draw.io source : [Simon PCB.drawio](Simon PCB.drawio)
+
+## Explain
 
 We use 5 LEDs/buttons for user's inputs. White LED/button is used to start/stop the game. The other LEDs show the sequence to the user and are lighted when user press the corresponding button. The LEDs states changes are done with Arduino ouputs and the buttons states is read through digitals inputs. So understand that the buttons controls the LEDs through the program. An analog output send a PWM signal to the passive buzzer. A note is associated with each LED color.
 
