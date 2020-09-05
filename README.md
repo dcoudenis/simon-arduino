@@ -11,7 +11,7 @@ This is a simple project implementing [Simon game](https://en.wikipedia.org/wiki
 
 ![PCB board](pcb.jpg)
 
-Draw.io source : [Simon PCB.drawio](Simon PCB.drawio)
+Draw.io source : [Simon PCB.drawio](/Simon PCB.drawio)
 
 ## Explain
 
