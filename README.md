@@ -16,11 +16,11 @@ Digitals inputs are wired with a 10kΩ pull-down resistor.
 ## Components
 
 LEDS :
-.. 1 x Green
-.. 1 x Red
-.. 1 x Yellow
-.. 1 x Blue
-.. 1 x White
+- 1 x Green
+- 1 x Red
+- 1 x Yellow
+- 1 x Blue
+- 1 x White
 Resistors :
 .. 5 x 330Ω
 .. 5 x 100Ω
