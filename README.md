@@ -22,13 +22,13 @@ LEDS :
 - 1 x Blue
 - 1 x White
 Resistors :
-.. 5 x 330Ω
-.. 5 x 100Ω
-.. 5 x 10kΩ
+- 5 x 330Ω
+- 5 x 100Ω
+- 5 x 10kΩ
 Others :
-.. 1 x passive buzzer
-.. 5 x push switche
-.. 13 x male pin header
+- 1 x passive buzzer
+- 5 x push switche
+- 13 x male pin header
 
 ## PCB
 
