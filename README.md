@@ -1,5 +1,7 @@
 # simon-arduino
-Simon game with some electronics components and Arduino
+*Simon game with some electronics components and Arduino*
+
+# Intro
 
 This is a simple project implementing [Simon game](https://en.wikipedia.org/wiki/Simon_(game)) on Arduino with a user interface based on a prototyping printed circuit board (PCB).
 
