@@ -29,5 +29,6 @@ and Arduino/PCB wiring :
 
 # Program
 
+To catch user inputs we need interrupts, but the physical interrupts are limited on Arduino. For my Uno board there is only 2 physicals interrupts available, on PIN 2 and 3.
 
-
+Softwares interrupts can enhanced Arduino capacity. In this project we use [PinChangeInterrupt library](https://www.arduino.cc/reference/en/libraries/pinchangeinterrupt/).
