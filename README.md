@@ -57,3 +57,48 @@ and Arduino/PCB wiring :
 To catch user inputs we need interrupts, but the physical interrupts are limited on Arduino. For my Uno board there is only 2 physicals interrupts available, on PIN 2 and 3.
 
 Softwares interrupts can enhanced Arduino capacity. In this project we use [PinChangeInterrupt library](https://www.arduino.cc/reference/en/libraries/pinchangeinterrupt/).
+
+```C++
+#include <PinChangeInterrupt.h>
+```
+
+The first 125 lines defines all the constants (notes, pin numbers, ...) and variables.
+
+In setup() function as usual we found the pin mode setup. It's here we also attach interrupts to inputs (buttons) states changes :
+
+```C++
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(green_input), green_button_change, CHANGE);
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(red_input), red_button_change, CHANGE);
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(yellow_input), yellow_button_change, CHANGE);
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(blue_input), blue_button_change, CHANGE);
+  attachPinChangeInterrupt(digitalPinToPinChangeInterrupt(white_input), white_button_change, CHANGE);
+```
+
+Each interrupt is linked with a function which is called when the input state changes :
+
+```C++
+void green_button_change() {
+  green_state = !green_state;
+  digitalWrite(green_output, green_state);
+  if (green_state == HIGH) {
+    last_input = GREEN;
+  }
+}
+```
+
+At the beginning of party (when white button is pressed), the rdn array is filled with random numbers between 1 and 4 (inclusive).
+
+Then the code alternate two phases (while user do not mistakes) :
+- Play sequence to user up to score value.
+- Read user inputs and compare to sequence (adding 1 to score when end of sequence is reached).
+
+If user input wrong color, game_over is set to 0 (true) and score to 100 (used to break while condition) :
+
+```C+
+if ( last_input == rdn[i] ) {
+        i++;
+      } else {
+        game_over = 1;
+        i = 100; // Exit while
+      }
+```
