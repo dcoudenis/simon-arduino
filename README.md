@@ -35,7 +35,7 @@ Resistors :
 
 Others :
 - 1 x passive buzzer
-- 5 x push switche
+- 5 x push switch
 - 13 x male pin header
 
 ## PCB
