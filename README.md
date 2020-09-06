@@ -94,7 +94,7 @@ Then the code alternate two phases (while user do not mistakes) :
 
 If user input wrong color, game_over is set to 0 (true) and score to 100 (used to break while condition) :
 
-```C+
+```C++
 if ( last_input == rdn[i] ) {
         i++;
       } else {
