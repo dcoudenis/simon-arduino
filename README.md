@@ -92,7 +92,7 @@ Then the code alternate two phases (while user do not mistakes) :
 - Play sequence to user up to score value.
 - Read user inputs and compare to sequence (adding 1 to score when end of sequence is reached).
 
-If user input wrong color, game_over is set to 0 (true) and score to 100 (used to break while condition) :
+If user inputs wrong color, game_over is set to 0 (true) and score to 100 (used to break while condition) :
 
 ```C++
 if ( last_input == rdn[i] ) {
@@ -102,3 +102,9 @@ if ( last_input == rdn[i] ) {
         i = 100; // Exit while
       }
 ```
+
+Serial monitor can be used to debug or to cheat ;)
+
+![Serial monitor](serial_monitor.png)
+
+Enjoy.
